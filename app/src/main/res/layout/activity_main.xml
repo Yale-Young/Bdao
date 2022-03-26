@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/shojopink"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:layout_scrollFlags="scroll"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:paddingHorizontal="7dp"
+                android:paddingVertical="10dp"
+                android:contentDescription="touxiang"
+                android:src="@drawable/pic"/>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:paddingVertical="5dp"
+                android:contentDescription="search"
+                android:layout_weight="1"
+                android:src="@drawable/search" />
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/m"
+                android:contentDescription=""/>
+
+            <ImageView
+                android:id="@+id/title"
+                android:layout_width="50dp"
+                android:visibility="gone"
+                android:layout_height="match_parent"
+                android:layout_gravity="end|center_vertical" />
+
+        </LinearLayout>
+
+
+
+
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:minHeight="40dp"
+            android:background="@color/white"
+            app:tabGravity="center"
+            app:tabIndicatorColor="@color/shojopink"
+            app:tabIndicatorHeight="3dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:tabIndicatorFullWidth="false"
+            app:tabMode="scrollable" />
+
+        <TextView
+            android:id="@+id/bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="12sp"
+            android:background="#eeeeee"
+            android:gravity="center"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            android:text="11111"
+            android:visibility="gone" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#eeeeee"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        android:layout_gravity="bottom"
+        app:itemIconTint="@drawable/bottom_navigation_item_selector"
+        app:itemTextColor="@drawable/bottom_navigation_item_selector"
+        android:background="?android:attr/windowBackground"
+        app:menu="@menu/navigation" />
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
